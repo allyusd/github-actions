@@ -16,4 +16,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          bash cd /app && ls
+          cd /app
+          ls
