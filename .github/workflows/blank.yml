@@ -22,7 +22,7 @@ jobs:
           mkdir -p /app/${{ env.PROJECT_NAME }}
           cd /app/${{ env.PROJECT_NAME }}
           if [ -f docker-compose.yml ]; then docker-compose stop; fi
-          curl https://raw.githubusercontent.com/allyusd/minesweeper/main/docker-compose.yml -o docker-compose.yml
+          curl https://raw.githubusercontent.com/allyusd/minesweeper/main/docker-compose.yml -o docker-compose.yml -s
           cat docker-compose.yml
           docker-compose pull
           docker-compose up -d
